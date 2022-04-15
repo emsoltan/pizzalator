@@ -1,0 +1,242 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-dark: #0a1014;
+  --primary-light: #f1faee;
+  --primary-green: #2f9c95;
+  --primary-red: #e63946;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* reset & common styles */
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-light);
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  background: var(--primary-red);
+
+  overflow: hidden;
+}
+button {
+  color: var(--primary-light);
+  padding: .75rem 2rem;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 1.5rem;
+  border: 1px solid var(--primary-light);
+  margin: 40px auto 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.container h3 {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+}
+.container li {
+  padding: .5rem;
+  cursor: pointer;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: 2rem auto;
+  /* border: 3px solid white; */
+}
+header .title {
+  flex-grow: 1;
+  margin-left: 20px;
+  font-size: 0.6em;
+}
+header h1 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  font-size: 1.6rem;
+}
+header .pizza-svg {
+  width: 5rem;
+  overflow: visible;
+  stroke: var(--primary-light);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/*hero*/
+
+.hero {
+  max-width: 45%;
+  height: 100%;
+  padding: 4rem 2rem;
+  background-color: rgba(10, 16, 20, 0.741);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+/* lists */
+li span.active {
+  font-weight: bold;
+}
+li span.active::before {
+  content: ">";
+  position: relative;
+  top: -2px;
+  margin-right: 0.3rem;
+  transform: scale(0.8, 1);
+  display: inline-block;
+}
+
+/* pages */
+.home {
+  position: relative;
+}
+.home h2 {
+  font-size: 4em;
+  margin-bottom: 2rem;
+}
+.home.container,
+.order.container,
+.toppings.container,
+.base.container {
+  text-align: center;
+  justify-content: space-between;
+  min-width: 60%;
+  height: 75vh;
+  box-shadow: 5px 5px 20px 0px rgba(34, 36, 33, 0.75);
+  background-color: var(--primary-dark);
+  border-radius: 0.75rem;
+}
+
+.home.container {
+  background: linear-gradient(
+      90deg,
+      rgba(10, 16, 20, 0.068) 0%,
+      rgba(10, 16, 20, 0.253) 80%
+    ),
+    url(./img//hero-bkg.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.home button {
+  color: var(--primary-light);
+  background-color: var(--primary-red);
+  padding: 1rem 2rem;
+  font-size: 1.6em;
+  border:none;
+  margin: 2rem 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.order p {
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 48rem) {
+
+  .home.container,
+.order.container,
+.toppings.container,
+.base.container{
+  height: 70vh;
+}
+  .hero {
+    max-width: 100%;
+    background-color: rgba(10, 16, 20, 0.241);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1rem;
+  }
+ .container {
+    max-width: 85%;
+  }
+  .home h2 {
+    font-size: 2rem;
+  }
+  .home button {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+/****** Modal *******/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal button {
+  color: #444;
+  border-color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.modal p {
+  color: #444;
+  font-weight: bold;
+}
+
+/* LOADER */
+
+.loader {
+  width: 1rem;
+  height: 1rem;
+  margin: 4rem auto;
+  border-radius: 50%;
+  background: #fff;
+}
+.loader-button {
+  min-width: 10rem;
+  /* background-color: #ffff; */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: 0 auto; */
+}
