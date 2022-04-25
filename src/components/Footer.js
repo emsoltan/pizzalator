@@ -5,7 +5,7 @@ import { BiCopyright } from "react-icons/bi";
 import { BsLinkedin } from "react-icons/bs";
 const FooterStyles = styled.footer`
   width: 50%;
-  height: 5rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ const FooterStyles = styled.footer`
 
   .social {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     font-size: 1.7rem;
     width: 15%;
     a {

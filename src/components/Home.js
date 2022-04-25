@@ -20,7 +20,7 @@ const containerVariants = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 1.5, duration: 1.5 },
+    transition: { delay: 1.5, duration: 1.5 ,ease: "easeInOut"},
   },
   exit: {
     x: "-100vh",
@@ -38,16 +38,16 @@ const Home = () => {
       exit="exit"
     >
       <div className="hero">
-        <h2>Welcome to Pizzalator</h2>
+        <h2>The Pizzalator</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
-          deserunt ipsum illum ut quasi officiis nesciunt exercitationem sequi
-          cumque dolore saepe, libero recusandae totam aspernatur vitae modi
-          dolores eius earum.
+          Love Pizza like us? <br/>Well, you'll love it even more when you make it your
+          own. 
+       <br/>
+          Here you have the ingredients and receipes you need :) 
         </p>
         <Link to="/base">
           <motion.button variants={buttonVariants} whileHover="hover">
-            Create Your Pizza
+            Lets Pizza!
           </motion.button>
         </Link>
       </div>

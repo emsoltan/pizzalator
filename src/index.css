@@ -38,7 +38,7 @@ body {
 }
 button {
   color: var(--primary-light);
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   font-size: 1rem;
   background: transparent;
   border-radius: 1.5rem;
@@ -58,7 +58,7 @@ button {
   text-transform: uppercase;
 }
 .container li {
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -67,7 +67,8 @@ header {
   display: flex;
   align-items: center;
   width: 75%;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding-top: 1.5rem;
   /* border: 3px solid white; */
 }
 header .title {
@@ -91,15 +92,29 @@ header .pizza-svg {
 /*hero*/
 
 .hero {
-  max-width: 45%;
+  min-width: 45%;
   height: 100%;
   padding: 4rem 2rem;
-  background-color: rgba(10, 16, 20, 0.741);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 0.75rem 0 0 0.75rem;
+}
+.hero p,
+.hero h2 {
+  width: 90%;
+  height: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 1rem 2rem;
+  background-color: rgba(10, 16, 20, 0.541);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* lists */
 li span.active {
@@ -119,20 +134,27 @@ li span.active::before {
   position: relative;
 }
 .home h2 {
-  font-size: 4em;
+  font-size: 3em;
+  text-align: center;
   margin-bottom: 2rem;
+  width: 70%;
+  height: auto;
 }
 .home.container,
 .order.container,
-.toppings.container,
+.ingredients.container,
 .base.container {
-  text-align: center;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 60%;
-  height: 75vh;
+  min-height: 50vh;
   box-shadow: 5px 5px 20px 0px rgba(34, 36, 33, 0.75);
   background-color: var(--primary-dark);
   border-radius: 0.75rem;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .home.container {
@@ -142,31 +164,57 @@ li span.active::before {
       rgba(10, 16, 20, 0.253) 80%
     ),
     url(./img//hero-bkg.jpg);
+  display: block;
   background-size: cover;
   background-position: right;
+  height: 75vh;
+  margin: 0 auto;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .home button {
   color: var(--primary-light);
   background-color: var(--primary-red);
   padding: 1rem 2rem;
   font-size: 1.6em;
-  border:none;
+  border: none;
   margin: 2rem 1.25rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 900;
 }
 .order p {
   margin: 20px auto;
 }
+.ingredients-content {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: visible;
+}
+.ingredients select {
+  /* width: 30%; */
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 @media screen and (max-width: 48rem) {
-
   .home.container,
-.order.container,
-.toppings.container,
-.base.container{
-  height: 70vh;
-}
+  .order.container,
+  .ingredients.container,
+  .base.container {
+  height: 80vh;
+    margin: 0 auto;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
   .hero {
     max-width: 100%;
     background-color: rgba(10, 16, 20, 0.241);
@@ -174,17 +222,28 @@ li span.active::before {
     justify-content: space-evenly;
     padding: 0 1rem;
   }
- .container {
+  .container {
     max-width: 85%;
+  }
+  h3{
+    font-size: 1rem;
   }
   .home h2 {
     font-size: 2rem;
+    width: 90%;
   }
-  .home button {
+  .home button,
+  .ingredients button {
     width: 100%;
     padding: 0.5rem 0.75rem;
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0 auto;
+    margin: 1rem 0;
+  }
+  .hero p {
+    width: 100%;
+    padding: 1rem  ;
+    font-size: 1.2rem;
   }
 }
 
