@@ -34,13 +34,13 @@ function App() {
       <Header />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route path="/base">
+          <Route path="base">
             <Base addBase={addBase} addCount={addCount} pizza={pizza} />
           </Route>
-          <Route path="/ingredients">
+          <Route path="ingredients">
             <Toppings addTopping={addTopping} pizza={pizza} />
           </Route>
-          <Route path="/recipe">
+          <Route path="recipe">
             <Recipe addBase={addBase} addCount={addCount} pizza={pizza} />
           </Route>
           <Route path="/">
