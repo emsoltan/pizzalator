@@ -137,7 +137,7 @@ li span.active::before {
   font-size: 3em;
   text-align: center;
   margin-bottom: 2rem;
-  width: 70%;
+  max-width: 50%;
   height: auto;
 }
 .home.container,
@@ -230,7 +230,7 @@ ul {
   }
   .home h2 {
     font-size: 2rem;
-    width: 90%;
+    max-width: 90%;
   }
   .home button,
   .ingredients button {
